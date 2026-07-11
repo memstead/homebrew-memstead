@@ -1,25 +1,25 @@
 class MemsteadMcp < Formula
   desc "MCP server for Memstead — exposes the typed entity-graph engine over JSON-RPC stdio. Default build produces the full `memstead-mcp` binary (multi-mem, git-backed); `--no-default-features` builds the lean folder + archive surface."
   homepage "https://memstead.io"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.2.0/memstead-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "dbb96f996359ee638499895664b16ac7f9419140a26986314457538675e05d2a"
+      url "https://github.com/memstead/memstead/releases/download/v0.3.0/memstead-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "e5cd89c372ae75f23a9a790469d03191452aa4097244d763d29bf745daa16b7d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.2.0/memstead-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "59167c70f4eb3643148253c221d88cdb1a56d8da35112af1d66515f871b2859e"
+      url "https://github.com/memstead/memstead/releases/download/v0.3.0/memstead-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "6fa51483d048d949f8ad63c94e2fb3ea9424969391a4ba0f7d1d0c91521515f3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.2.0/memstead-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ed7a32728ddc800341369ba74e59cc3496f3498adb1075c616b81e067bf911aa"
+      url "https://github.com/memstead/memstead/releases/download/v0.3.0/memstead-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "63563e4ed2b8171a1ca55f4df13c96e18aabaa5a3df889a75eec8e025ee018bf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.2.0/memstead-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9bb46ffe5898dbb1cc32c5b2de42996f94610bf5341ed60e9d453a5ae3b4c72b"
+      url "https://github.com/memstead/memstead/releases/download/v0.3.0/memstead-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "159f3e3d96a400e1b213e1d0c6e84a0aff2f0d8af654a8fdf820bac83a9e8b83"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
