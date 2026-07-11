@@ -1,25 +1,25 @@
 class MemsteadSchema < Formula
-  desc "Schema types for Memstead — entity definitions, vocabulary, and validation rules."
+  desc "Schema types for Memstead — entity definitions, vocabulary, and validation rules. Internal library surface consumed by the memstead binaries — pre-1.0, experimental, no API stability promise."
   homepage "https://memstead.io"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.2.0/memstead-schema-aarch64-apple-darwin.tar.xz"
-      sha256 "01c29c25185dd4345f89ff6b33c9f71c60c76ad373bdbde00d87a8efea284945"
+      url "https://github.com/memstead/memstead/releases/download/v0.3.0/memstead-schema-aarch64-apple-darwin.tar.xz"
+      sha256 "d224b1f8eef7bf015ece01e708032fd7267e520b48cf26fbf7c4ea7a815cb24a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.2.0/memstead-schema-x86_64-apple-darwin.tar.xz"
-      sha256 "136872fd56f95d98d7fdbd8bff6ee54d2cba10aae7157a7703f066d9db4b1898"
+      url "https://github.com/memstead/memstead/releases/download/v0.3.0/memstead-schema-x86_64-apple-darwin.tar.xz"
+      sha256 "418ceadee235d1ef331e1c2afbf58b76d40ed298196a1f8b7e10c16d33dad349"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.2.0/memstead-schema-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3d1fc51d44fce5eeee5f681c988e66c9a7ba1dd6f7087f205db353aa60856138"
+      url "https://github.com/memstead/memstead/releases/download/v0.3.0/memstead-schema-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "96f364ed673870a1bb7605926b979dc7b085b33f1c731eb3dc1394c8eb5b547b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.2.0/memstead-schema-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "89b805ca2ffdd994cb5b4d3adb43635f37658ea75096385d421298ed1ba421cd"
+      url "https://github.com/memstead/memstead/releases/download/v0.3.0/memstead-schema-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0dbe75b58735ae6925f5d57cb62ec128d138de2290007872a67945458924faca"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
