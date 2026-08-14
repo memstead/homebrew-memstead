@@ -1,25 +1,25 @@
 class MemsteadMcp < Formula
   desc "MCP server for Memstead — exposes the typed entity-graph engine over JSON-RPC stdio. Default build produces the full `memstead-mcp` binary (multi-mem, git-backed); `--no-default-features` builds the lean folder + archive surface."
   homepage "https://memstead.io"
-  version "0.6.0"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.6.0/memstead-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "1a0e4a97ee85694bbe4a222cc56e34c107dd56bf59e7bfd6946d495e0c1e8aea"
+      url "https://github.com/memstead/memstead/releases/download/v0.7.0/memstead-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "bbcb03113bd346ee6e58314f7ef8a3e38564fe52053dee5b6bda5e07d022310b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.6.0/memstead-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "b359e5aa10becbc2694bbd66ccb884b59a7da0bf53dc4084975a5a17720326da"
+      url "https://github.com/memstead/memstead/releases/download/v0.7.0/memstead-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "480f4b68e667c39500563ea34d17c3de11a409dd6f7e19a5b63e216dc30dc467"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.6.0/memstead-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9c4332100acaba285017105d96ed9883b1002839589ee28fdecf534ded95cdb2"
+      url "https://github.com/memstead/memstead/releases/download/v0.7.0/memstead-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e5e20f975fc2fe76d5f8168142279547cc8a16acfca171e7702df5b8c2e99885"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.6.0/memstead-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ce50b56adb5b4b5405e8a54d4d504f7b2ab0f5d49e701cb5a6adcc8925ca3dda"
+      url "https://github.com/memstead/memstead/releases/download/v0.7.0/memstead-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "90f8f7ced17236e7e55ee467842d5fda6b4b09814a38b5b184e33e4ee3836a88"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -48,10 +48,18 @@ class MemsteadMcp < Formula
   end
 
   def install
-    bin.install "memstead-mcp" if OS.mac? && Hardware::CPU.arm?
-    bin.install "memstead-mcp" if OS.mac? && Hardware::CPU.intel?
-    bin.install "memstead-mcp" if OS.linux? && Hardware::CPU.arm?
-    bin.install "memstead-mcp" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "memstead-mcp"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "memstead-mcp"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "memstead-mcp"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "memstead-mcp"
+    end
 
     install_binary_aliases!
 
