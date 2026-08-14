@@ -1,25 +1,25 @@
 class MemsteadCli < Formula
   desc "Command-line interface for Memstead — query and mutate typed entity graphs from the shell. Default build produces the full `memstead` binary (multi-mem, git-backed); `--no-default-features` builds the lean folder-only surface."
   homepage "https://memstead.io"
-  version "0.6.0"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.6.0/memstead-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "a9a6eac16c5cb21ecbb28cb1d44f8311c1e1920e8ede80e2bd22c2e86e5c85c2"
+      url "https://github.com/memstead/memstead/releases/download/v0.7.0/memstead-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "74cb54162a9b225322bcd1f94b9fa38fa7666e40217e03727b32fd12f0194e2e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.6.0/memstead-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "e3546397b199f6e271ea35c8e5d6d60278e54aa2620af0606cd2865606eae7e0"
+      url "https://github.com/memstead/memstead/releases/download/v0.7.0/memstead-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "a01f80d49597813d5fed2315a95bfbe7e6a5980a055f4e1cda3e588e70e0e5dd"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.6.0/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "18580f67b4c4dceb728839a63296ae4eff0a6d81d36630b9f1e88470db5ae3c1"
+      url "https://github.com/memstead/memstead/releases/download/v0.7.0/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ab2bf375d1df7455d659c0eaaef7272682d1a6e36e3ac1f425d2c70176126a85"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.6.0/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "416436c2a08b47af1f22d93f787716732da1a376c293cac0a930e36eff99966b"
+      url "https://github.com/memstead/memstead/releases/download/v0.7.0/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a786cd81fa059e95b6c15a9ac1832885a186957eb3cd996beb01b87d8e9ddfec"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -48,10 +48,18 @@ class MemsteadCli < Formula
   end
 
   def install
-    bin.install "memstead" if OS.mac? && Hardware::CPU.arm?
-    bin.install "memstead" if OS.mac? && Hardware::CPU.intel?
-    bin.install "memstead" if OS.linux? && Hardware::CPU.arm?
-    bin.install "memstead" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "memstead"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "memstead"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "memstead"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "memstead"
+    end
 
     install_binary_aliases!
 
