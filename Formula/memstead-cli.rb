@@ -1,25 +1,25 @@
 class MemsteadCli < Formula
   desc "Command-line interface for Memstead — query and mutate typed entity graphs from the shell. Default build produces the full `memstead` binary (multi-mem, git-backed); `--no-default-features` builds the lean folder-only surface."
   homepage "https://memstead.io"
-  version "0.12.0"
+  version "0.13.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.12.0/memstead-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "3e45451f03c6367dc5ddd1feb42ec630cd09ac62aaae62c2fb33b4b574d35956"
+      url "https://github.com/memstead/memstead/releases/download/v0.13.0/memstead-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "dd03d53f392be754192a91f65fc79963811db1a74231336da230fb05d65cd54d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.12.0/memstead-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "f9d0fe1e1a092136b84c161e70dcae17b1a712f5ca8190de8c1117607a834940"
+      url "https://github.com/memstead/memstead/releases/download/v0.13.0/memstead-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "66508650cc79688041fc9ecec4a90397f0974b03ae4ae2888a511ac7c87fbeb1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.12.0/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e9a8a9e6bfc40a40a3825818b9a2138428d219e4d5e3257819ebc3cad82e5842"
+      url "https://github.com/memstead/memstead/releases/download/v0.13.0/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "72421cb74f2155079f559f8b7b6c304306a398569630e78da36ddccab82058d7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.12.0/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "db17c5ec817b24fb0b9ac5bd33af8e50f9b006046660955f54776c48a0095318"
+      url "https://github.com/memstead/memstead/releases/download/v0.13.0/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5b9f499368ea919831984868eab3ef10eb30d8536e50e7ccac194577b59623f1"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
