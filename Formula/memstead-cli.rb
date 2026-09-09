@@ -1,25 +1,25 @@
 class MemsteadCli < Formula
-  desc "Command-line interface for Memstead — query and mutate typed entity graphs from the shell. Default build produces the full `memstead` binary (multi-mem, git-backed); `--no-default-features` builds the lean folder-only surface."
-  homepage "https://memstead.io"
-  version "0.18.1"
+  desc "Install expertise into your agent. Command-line interface for Memstead: the `memstead` binary queries and mutates typed knowledge graphs kept as markdown in git (multi-mem, git-backed; folder workspaces served by the same engine)."
+  homepage "https://memstead.com"
+  version "0.19.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.18.1/memstead-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "d3e25f405cb4d21d8d6d96430a41cda3eb71db1f722c0de96366f2bbd427fb41"
+      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "84b1f664f38e16b17a14fc2c82ab6706c7bc971b84c87166155bca15af15d260"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.18.1/memstead-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "0932d370264ba9db061628329b2380c06dbb8e852ef4196353118e8949768647"
+      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "19a1faafefe091b96daec6ae40d051cc55bb717ceeace374aa01a64faaccc61a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.18.1/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f4432fa6514cfb6a199524faeb15cec810bc05e502aa8d76def7724f7b091e63"
+      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "21bef849adab6922619fc75b3effbb1d19f90a712c890e02684cd59d4f79207e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.18.1/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "09c73a103725ca0e67aabd25c513c66ed1be4c6802e947d14bfb2a0f6c9f7689"
+      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3b7755c3339cbf6d3d23b766fa17e8064a63eae16f24d35b92b70c3545d0f8da"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
