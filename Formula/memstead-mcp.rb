@@ -1,25 +1,25 @@
 class MemsteadMcp < Formula
-  desc "MCP server for Memstead — exposes the typed entity-graph engine over JSON-RPC stdio. Default build produces the full `memstead-mcp` binary (multi-mem, git-backed); `--no-default-features` builds the lean folder + archive surface."
-  homepage "https://memstead.io"
-  version "0.18.1"
+  desc "Install expertise into your agent. MCP server for Memstead: the `memstead-mcp` binary exposes typed knowledge graphs kept as markdown in git to any MCP-capable agent over JSON-RPC stdio (multi-mem, git-backed; folder workspaces served by the same engine)."
+  homepage "https://memstead.com"
+  version "0.19.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.18.1/memstead-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "235b74d0d4e7f6542437ebf27689972424e6f4783d450a6fa38a6a18e4117b5f"
+      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "895b99e8b53a55f3b4c98817f1c4213ad1a011403e8772e06d37f6d9418774a3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.18.1/memstead-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "8c3aa4569a3cf8fa9c0e60b6681a8cb6f62be3c7f3b7f7d9cb550411de06a33e"
+      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "f0e9ce08810be8405c0ba36ca7038e35961ef284735451edda4b2d88018af381"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.18.1/memstead-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3efb5e0e0d468c39fac3113c78c2a69a4ed8dc837988f8d55399fdd3c9ae8bc0"
+      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "201a294009b4e43433b65ba481a7c3df8ddc679576603ca76bff9fb1154cda77"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.18.1/memstead-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "50ecda76be61c6aedc4dc8baf589a0c3906d7abfbef034cc699bd40220d7d1dd"
+      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6d7a961cc782a608eb104e29855f5ba549ef33b7279405928cf2b7cd62b24e16"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
