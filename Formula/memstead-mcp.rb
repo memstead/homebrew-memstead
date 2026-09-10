@@ -1,25 +1,25 @@
 class MemsteadMcp < Formula
   desc "Install expertise into your agent. MCP server for Memstead: the `memstead-mcp` binary exposes typed knowledge graphs kept as markdown in git to any MCP-capable agent over JSON-RPC stdio (multi-mem, git-backed; folder workspaces served by the same engine)."
   homepage "https://memstead.com"
-  version "0.19.0"
+  version "0.20.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "895b99e8b53a55f3b4c98817f1c4213ad1a011403e8772e06d37f6d9418774a3"
+      url "https://github.com/memstead/memstead/releases/download/v0.20.0/memstead-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "af9c0ed87db1276bd6dcd532e5335bfd3a332fc4064e536cc467d2dc5b64889e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "f0e9ce08810be8405c0ba36ca7038e35961ef284735451edda4b2d88018af381"
+      url "https://github.com/memstead/memstead/releases/download/v0.20.0/memstead-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "4b06d881060fd8408fa3ac1802f6c7c577c2a01148797ae53d558858ce91dfe4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "201a294009b4e43433b65ba481a7c3df8ddc679576603ca76bff9fb1154cda77"
+      url "https://github.com/memstead/memstead/releases/download/v0.20.0/memstead-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f73eb3d50c92750e96a08fdacfa904ea6761caa22abbfc273fd5c3db5afdad5f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.19.0/memstead-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6d7a961cc782a608eb104e29855f5ba549ef33b7279405928cf2b7cd62b24e16"
+      url "https://github.com/memstead/memstead/releases/download/v0.20.0/memstead-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "670ca4fe8ce894af81f4c33bc3a0f7dcb849dfda66434c897c8919e489b75832"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
