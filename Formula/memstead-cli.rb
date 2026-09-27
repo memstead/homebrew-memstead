@@ -1,36 +1,40 @@
 class MemsteadCli < Formula
   desc "Install expertise into your agent. Command-line interface for Memstead: the `memstead` binary queries and mutates typed knowledge graphs kept as markdown in git (multi-mem, git-backed; folder workspaces served by the same engine)."
   homepage "https://memstead.com"
-  version "0.20.0"
+  version "0.21.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.20.0/memstead-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "6fc28d4efdd90f12e0919487722ce8d243167e41b93e8d3be5c883975835432a"
+      url "https://github.com/memstead/memstead/releases/download/v0.21.0/memstead-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "f456faf9929664faef866fa4669cc1778ce7b19ecc310b6b5c1d81066fe0510d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.20.0/memstead-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "ae5197932c1dd0a07e5e7308094375418bb2dd24a42c4ba423f8169e476fc655"
+      url "https://github.com/memstead/memstead/releases/download/v0.21.0/memstead-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "879f3895c9fe2510ff81871b071e6d65202e47566b19673f9a089cb35554ec36"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.20.0/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7bfe57ea0ad7cec63a87da6e23484dce0042a20aada4299d889283e9f5e0b8a7"
+      url "https://github.com/memstead/memstead/releases/download/v0.21.0/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "048175fe863f29c5512f115f227981e00d9b1a30ca34d88a707710a8721a5122"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.20.0/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a90f91e6a91bdfa4dfbfd794c6c67befbdf891e8b6577440bb0e4b29317ad387"
+      url "https://github.com/memstead/memstead/releases/download/v0.21.0/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7ff0e8c3306c54812ddf98ca90a609f69b9e019026ca3d7fb4655729f028e22c"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":      {},
+    "aarch64-apple-darwin": {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
-    "x86_64-pc-windows-gnu":     {},
-    "x86_64-unknown-linux-gnu":  {},
-  }.freeze
+    "aarch64-unknown-linux-musl-dynamic": {},
+    "aarch64-unknown-linux-musl-static": {},
+    "x86_64-apple-darwin": {},
+    "x86_64-pc-windows-gnu": {},
+    "x86_64-unknown-linux-gnu": {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static": {}
+  }
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
