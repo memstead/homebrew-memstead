@@ -1,25 +1,25 @@
 class MemsteadCli < Formula
   desc "Typed project knowledge for AI agents. Command-line interface for Memstead: the `memstead` binary queries and mutates typed knowledge graphs kept as markdown in git (multi-mem, git-backed; folder workspaces served by the same engine)."
   homepage "https://memstead.com"
-  version "0.24.0"
+  version "0.25.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.24.0/memstead-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "1ac0dbf7fc5f0a709449400ef54070f3c099e4962a3321c9f5ab7006543b3275"
+      url "https://github.com/memstead/memstead/releases/download/v0.25.0/memstead-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "a655163c41b33bd977a3d087816d9f4bebc87bf83c0617b1fa1cd98685ff6e0a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.24.0/memstead-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "f207119c9886c0eadb6814efb05a2254ebe640bab2f7375c11fb33c5ce9896a8"
+      url "https://github.com/memstead/memstead/releases/download/v0.25.0/memstead-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "31f1a6d78a6742e1134421041569dfc171014a405dc6eb6915b24867718ff9bb"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/memstead/memstead/releases/download/v0.24.0/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b6af062e4c0c5152136f165755ec169efc35d98d3b9096663060a7b266195c6b"
+      url "https://github.com/memstead/memstead/releases/download/v0.25.0/memstead-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f35c9f957df48d222bc040165429178020797a6e92a05f047159145c11757dfc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/memstead/memstead/releases/download/v0.24.0/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "83483eb90ce686cad891a4bde19bf2bde63999bad49b5b70c307b7b169e88130"
+      url "https://github.com/memstead/memstead/releases/download/v0.25.0/memstead-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c1e7a05096e817f5531c02a393db5946fa9c33e023debcc1ec09e02994cde215"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
